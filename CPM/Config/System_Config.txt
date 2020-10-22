@@ -1,0 +1,19 @@
+﻿﻿# 설정값의 '=' 좌우로 공백이 없어야 합니다.
+# 검색어
+search.keyword=사과
+# 검색어 입력 후 대기 시간 (초)
+search.keyword.input.wait=2
+# 검색 루프 횟수 지정
+search.loop.cnt=2
+# 검색 후 대기 시간 (초)
+search.after.wait=3
+# 상품 클릭 후 대기시간 (초)
+product.click.after.wait=1
+# 상품페이지내 스크롤처리 횟수 
+product.scroll.range=1-10
+# 상품페이지내 체류시간 (초)
+product.visit.range=5-10
+# 광고가 보이지 않을 경우 대기시간 (초)
+ad.not.visible.range=1-10
+# 검색 수행시간 지정 (시/분)
+search.available.hm=0900-1800
