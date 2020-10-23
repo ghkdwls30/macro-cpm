@@ -47,11 +47,15 @@ namespace CPM
             InitializeComponent();
             SetConfig();
             Init();
+           
         }
 
         private void Init()
         {
             label1.Text = GetExternalIPAddress();
+
+            // 라이센스복호화
+            license = AESDecrypt128(license, LICENSE_KEY);
         }
 
         // 컨피그 세팅
@@ -522,9 +526,7 @@ namespace CPM
         }
 
         public void isValidLicense() {
-            
-            license = AESDecrypt128(license, LICENSE_KEY);
-     
+                    
             if (license.Length == 0) {
                 throw new Exception("License Not Vaild!");
             }
