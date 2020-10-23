@@ -231,6 +231,9 @@ namespace CPM
         // 백그라운드 작업
         private void DoWork()
         {
+            // 라이센스 체크
+            isValidLicense();
+
             // 드라이버 생성
             driver = MakeDriver(false, userAgentList[new Random().Next(userAgentList.Count)]);
             // 루프횟수
@@ -240,8 +243,6 @@ namespace CPM
 
             for (int i = 0; i < searchLoopCnt; i++)
             {
-                // 라이센스 체크
-                isValidLicense();
 
                 Console.WriteLine("===========================[ {0} / {1} ]=============================", i, searchLoopCnt);
                 Console.WriteLine(string.Format("[INFO] 프로그램 동작시간 체크"));
